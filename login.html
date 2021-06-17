@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Login And Rrgistration Form</title>
+
+    <style>
+
+body {
+  font-size: 28px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 4px 110px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #23E3C9;
+}
+
+{
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: sans-serif;
+
+}
+
+
+.hero{
+
+    height: 100%;
+
+    width: 1333px;
+
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(island.jpg);
+
+    background-position: auto;
+
+    background-size: cover;
+
+    position: absolute;
+
+}
+
+
+.form-box{
+
+    width: 380px;
+
+    height: 500px;
+
+    position: relative;
+
+    margin: 6% auto;
+    background: rgba(0,0,0,0.8);
+
+    padding: 5px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+
+.button-box{
+
+    width: 220px;
+
+    margin: 15px auto;
+
+    position: relative;
+    box-shadow: 0 0 20px 9px #23e3d04d;
+
+    border-radius: 30px;
+
+}
+
+.toggle-btn{
+
+    padding: 10px 30px;
+
+    cursor: pointer;
+
+    background: transparent;
+
+    border: 0;
+
+    outline: none;
+
+    position: relative;
+
+}
+
+
+#btn{
+
+    top: 0;
+
+    left: 0;
+
+    position: absolute;
+
+    width: 110px;
+
+    height: 100%;
+    background: linear-gradient(to right, #1057ff, #23e3c9);
+
+    border-radius: 30px;
+
+    transition: .5s;
+
+}
+
+.social-icons{
+    margin: 30px auto;
+
+    text-align: center;
+
+}
+
+
+.social-icons img{
+
+    width: 70px;
+
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.input-group{
+    top: 180px;
+
+    position: absolute;
+
+    width: 280px;
+
+    transition: .5x;
+
+}
+
+
+.input-field{
+
+    color: #23e3c9;
+    width: 100%;
+
+    padding: 10px 0;
+
+    margin: 5px 0;
+
+    border-left: 0;
+
+    border-top: 0;
+
+    border-right: 0;
+
+    border-bottom: 1px solid #23e3c9;
+
+    outline: none;
+
+    background: transparent;
+
+}
+
+
+.submit-btn{
+
+    width: 85%;
+    padding: 10px 30px;
+
+    cursor: pointer;
+
+    display: block;
+
+    margin: auto;
+
+    background: linear-gradient(to right, #1057ff, #23e3c9);
+
+    border: 0;
+
+    outline: none;
+
+    border-radius: 30px;
+
+}
+
+
+.chech-box{
+
+    margin: 30px 10px 30px 0;
+
+}
+
+
+span{
+
+    color: #23e3c9;
+
+    font-size: 12px;
+
+    bottom: 62px;
+
+    position: absolute;
+
+}
+
+
+#login{
+
+    left: 50px;
+
+}
+
+
+#register{
+
+    left: 450px;
+
+}
+    
+
+    </style>
+       </head>
+
+<body>
+
+
+<ul>
+  <li><a href="input.html">Home</a></li>
+  <li><a href="infov.html">Vote</a></li>
+  <li><a href="about.html">About & Contact</a></li>
+  <li><a class="active" href="login.html">Login</a></li></ul>
+</ul>
+
+    <div class="hero">
+
+    <div class="form-box">
+
+        <div class="button-box">
+
+            <div id="btn"></div>
+
+            <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+
+            <button type="button" class="toggle-btn" onclick="register()">Register</button>
+
+            </div>
+
+        <div class="social-icons">
+
+        <img src="Abc.png">
+
+        </div>
+
+        
+    <form action="login.php" method="post" id="login" class="input-group">
+
+            <p style="text-align:center; color:red; font-size: 17px;">
+*Please Enter Your Credentials*</p>
+
+            <input type="email" class="input-field" placeholder="Email Id" name="email_id" required>
+
+            <input type="password" class="input-field" placeholder="Enter Password" name="password" required>
+
+        <input type="checkbox" class="chech-box"required><span>Remember Password</span>
+
+        <button type="submit" class="submit-btn" name="s">Log In</button>
+
+        </form>
+
+        <form action="registration.php" method="post" id="register" class="input-group">
+
+	    <p style="text-align:center; color:red; margin: 0px; font-size: 17px;">
+*Please Enter Your Credentials*</p>
+            <input type="text" class="input-field" placeholder="Aadhar Card Number (*Space After 4 Digit*)" name="aadhar" id="aadhar" required>
+
+
+		<script type="text/javascript">
+        	  function validation()
+
+		       {
+            		var regexp=/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/;
+
+           
+             var x=document.getElementById("aadhar").value;
+
+           	  if(regexp.test(x))
+
+               		{
+
+                            window.alert("Aadhar Number is VALID");
+
+                   
+     }
+
+        	  else{ window.alert("Aadhar Number is INVALID");
+
+              		window.open("login.html","_self");
+			} 
+			}            
+    		</script>
+
+            <input type="email" class="input-field" placeholder="Email Id" name="email_id" required>
+
+	    <input type="text" class="input-field" placeholder="Phone Number" name="phone_number" id="phone_number" required>
+
+			<script type="text/javascript">
+        	  function validationp()
+
+		       {
+            		var regexp=/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+           
+             var x=document.getElementById("phone_number").value;
+
+           	  if(regexp.test(x))
+
+               		{
+
+                            window.alert("Phone Number is VALID");
+
+                   
+     }
+
+        	  else{ window.alert("Phone Number is INVALID");
+
+              		
+			} 
+			}            
+    		</script>
+
+            <input type="password" class="input-field" placeholder="Enter Password" name="password" required>
+
+        <input type="checkbox" class="chech-box" required>
+	<span>I agree to the terms & condition</span>
+
+        <button type="submit" class="submit-btn" name="b1"onclick="validation(); validationp()
+;">Register</button>
+
+        </form>
+
+        </div>
+
+   
+    </div>
+
+    
+    <script>
+
+    var x = document.getElementById("login");
+
+    var y = document.getElementById("register");
+
+    var z = document.getElementById("btn");
+
+
+function register(){
+
+        x.style.left = "-400px";
+
+        y.style.left = "50px";
+
+        z.style.left = "110px";
+
+    }
+
+
+    function login(){
+
+        x.style.left = "50px";
+
+        y.style.left = "450px";
+
+        z.style.left = "0px";
+
+    }
+
+        
+    </script>
+
+    
+    </body>
+
+</html> 

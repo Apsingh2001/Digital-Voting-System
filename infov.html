@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Fill Details</title>
+<style>
+
+body {
+  font-size: 28px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 4px 110px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #23E3C9;
+}
+
+body  {
+  background-image: ("bg.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+h1 {
+  color: #23E3C9;
+  text-underline-position: auto;
+}
+
+	
+
+	{	
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Josefin Sans', sans serfis;
+	}
+
+	body{   
+		background-image: url("6.png");
+		background-position: center;
+		background-size: cover;
+		font-family: sans-serif;
+	}
+	
+	.main_div{
+		width:100%;
+		height:100vh;
+		position: relative;
+	}
+
+	.box{
+		height: 450px;
+		width: 500px;
+		position: absolute;
+		top: 50%; 
+		left:50%;
+		transform: translate(-50%, -50%);
+		padding-top: 0px;
+		background: rgba(0,0,0,0.8);
+		border-radius: 10px;
+		background-attachment: fixed;
+	}
+
+box.h1{
+	margin-bottom: 10px;
+	color: #03a9f4;
+	text-align: upper center;
+	text-transform: capitalize;
+	letter-spacing: 10px;
+
+}
+.box .inputBox{
+	position: relative;
+}
+.box .inputBox input{
+	text-transform: uppercase;
+	width: 470px;
+	padding: 10px;
+	font-size:16px;
+	color: #fff;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: 10px;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+
+}
+
+.box .inputBox label{
+	position: absolute;
+	top: 0;
+	left: 10px;
+	letter-spacing: 1px;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	transition: 0.5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label
+{
+	top: -20px;
+	left: 5px;
+	color: #23E3C9;
+	font-size: 12px
+}
+
+.box input[type="submit"]{
+	background: transparent;
+	border: none;
+	outline: none;
+	color: auto;
+	background: #23E3C9;
+	padding: 8px 16px;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+.btn{
+	background: #23E3C9;
+	text-align: center;
+	padding: 40px;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	text-transform: uppercase;
+
+}
+
+.box input[type="Reset"]{
+	background: transparent;
+	border: none;
+	outline: none;
+	color: auto;
+	background: #23E3C9;
+	padding: 8px 16px;
+	border-radius: 5px;
+	font-size: 12px;
+}
+
+.btn{
+	background: #23E3C9;
+	text-align: center;
+	padding: 15px;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	text-transform: uppercase;
+
+}
+
+
+span{
+
+    color: #23E3C9;
+    font-size: 14px
+    }
+
+</style>
+
+</head>
+<body>
+
+<ul>
+  <li><a href="input.html">Home</a></li>
+  <li><a class="active" href="infov.html">Vote</a></li>
+  <li><a href="about.html">About & Contact</a></li>
+  <li><a href="login.html">Login</a></li></ul>
+</ul>
+
+<div class="main_div">
+<div class="box">
+<h1/>Fill Details</h1>
+<form action="infov.php" method="post">
+	<div class="inputBox">
+		<input type="text" name="ADDHARCARD_NUMBER" id="ADDHARCARD_NUMBER" autocomplete="off"
+		required>
+                <script type="text/javascript">
+ 
+   		function validationa() {
+            	 var regexp=/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/;
+
+           
+      var x=document.getElementById("ADDHARCARD_NUMBER").value;
+
+          	 if(regexp.test(x))
+
+               {
+
+               window.alert("Aadhar Card Number is VALID");
+
+               }
+
+	        else{
+			 window.alert("Aadhar Card Number is INVALID");
+			 window.open("infov.html","_self");
+		    }
+		
+		}
+   		</script>
+		<label>ADDHARCARD NUMBER (*Space After 4 Digit*)</label>	
+		</div>
+
+
+		<div class="inputBox">
+		<input type="text" name="PANCARD_NUMBER" id="PANCARD_NUMBER" autocomplete="off"
+		required>
+		<script type="text/javascript">
+        	function validationp() {
+            	var PANCARD_NUMBER = document.getElementById("PANCARD_NUMBER");
+            	var regex = /([A-Z]){5}([0-9]){4}([A-Z]){1}$/;
+            	if (regex.test(PANCARD_NUMBER.value.toUpperCase())) {
+                window.alert("Pancard Number is VALID");
+		
+            	} else {
+                window.alert("Pancard Number is INVALID");
+		window.open("infov.html","_self");
+            	}
+        	}   
+    		</script>
+		<label>PAN CARD NUMBER</label>			
+		</div>
+
+		<div class="inputBox">
+		<input name="VOTING_CARD_NUMBER" type="text" id="VOTING_CARD_NUMBER" autocomplete="off" required>
+
+		<script type="text/javascript">
+        	function Validate() {
+           	var VOTING_CARD_NUMBER = document.getElementById("VOTING_CARD_NUMBER");
+            
+            	var regex = /^([a-zA-Z]){3}([0-9]){7}?$/g;
+            	if (regex.test(VOTING_CARD_NUMBER.value.toUpperCase())) 
+            	{
+
+               	window.alert("Voter ID Number is VALID");
+               	}
+
+	        else{
+			 window.alert("Voter ID Number is INVALID");
+			 window.open("infov.html","_self");
+		    }
+		
+		}
+    		</script>
+		<label>VOTING CARD NUMBER</label>	
+		</div>
+		<div><input type="checkbox" class="chech-box" required>
+                <span>*Make Sure Credentials are Correct*</span>
+		</div>
+                <div>
+		<input type="Submit" name="submit" id="btnSubmit" value="Submit" onclick="validationa(); validationp(); Validate();">
+		<input type="Reset" name="cancel" value="Cancel">
+	        </div>
+
+</form>
+</div>
+</div>
+</body>
+</html>

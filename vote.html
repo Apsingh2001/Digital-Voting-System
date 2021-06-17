@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Choose Your Rights</title>
+<style>
+.input-hidden {
+ position: absolute;
+ margin: 180px 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.input-group{
+    top: 180px;
+
+    position: absolute;
+
+    width: 280px;
+
+    transition: .5x;
+
+}
+
+.submit-btn{
+
+    width: auto;
+
+    padding: 10px 30px;
+
+    cursor: pointer;
+
+    display: block;
+
+    margin: 10px 630px;
+
+    background: linear-gradient(to right, #1057ff, #23e3c9);
+
+    border: 0;
+
+    outline: none;
+
+    border-radius: 30px;
+
+    position: ;
+}
+
+
+.column {
+  float: left;
+  width: 1280px;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+
+input[type=radio]:checked + label>img {
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px 3px #090;
+}
+
+input[type=radio] + label>img {
+  border: 1px dashed #444;
+  width: auto;
+  height: 200px;
+  transition: 500ms all;
+ 
+}
+
+input[type=radio]:checked + label>img {
+  transform: 
+    rotateZ(-10deg) 
+    rotateX(10deg);
+}
+
+html {
+  background-color: #fff;
+  background-size: 100% 1.2em;
+  background-image: 
+    linear-gradient(
+      90deg, 
+      transparent 79px, 
+      #abced4 79px, 
+      #abced4 81px, 
+      transparent 81px
+    ),
+    
+}
+</style>
+
+</head>
+
+<body>
+
+<form action="vote.php" method="post" id="login" class="input-group">
+
+<div class="column">
+<div class="card" >
+<input 
+  type="radio" name="choose"
+  value="BJP" 
+  id="bjp" class="input-hidden" />
+<label for="BJP">
+  <img 
+    src="bjp.png" 
+    alt="BJP" />
+</label>
+
+<input 
+  type="radio" name="choose" 
+  value="Congress"
+  id="congress" class="input-hidden" />
+<label for="Congress">
+  <img 
+    src="c.png" 
+    alt="Congress" />
+</label>
+
+<input 
+  type="radio" name="choose"
+  value="AAP"
+  id="aap" class="input-hidden" />
+<label for="AAP">
+  <img 
+    src="aap.jpeg" 
+    alt="AAP" />
+</label>
+
+<input 
+  type="radio" name="choose"
+  value="Shiv Sena"
+  id="shiv" class="input-hidden" />
+<label for="Shiv Sena">
+  <img 
+    src="ss.png" 
+    alt="Shiv Sena" />
+</label>
+
+<input 
+  type="radio" name="choose"
+  value="NCP"
+  id="NCP" class="input-hidden" />
+<label for="NCP Party">
+  <img 
+    src="ncp.png" 
+    alt="NCP Party" />
+</label>
+
+<input 
+  type="radio" name="choose"
+  value="samajwadi"
+  id="samajwadi" class="input-hidden" />
+<label for="Samajwadi Party">
+  <img 
+    src="sp.png" 
+    alt="Samajwadi Party" />
+</label>
+</div>
+</div>
+
+<div>
+<button type="submit" class="submit-btn" name="save">Submit</button>
+</div>
+</form>
+
+</body>
+</html>
